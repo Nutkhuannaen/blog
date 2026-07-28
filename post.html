@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post — My Blog</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/dark.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <!-- theme.js is intentionally NOT deferred — runs sync to prevent FOUC -->
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">Blog</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Posts</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <a href="index.html" class="post-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        All posts
+      </a>
+
+      <!-- Loading skeleton -->
+      <div id="post-loading">
+        <div class="skeleton" style="height: 2.5rem; margin-bottom: 1rem; border-radius: 0.5rem;"></div>
+        <div class="skeleton" style="height: 1rem; width: 55%; margin-bottom: 2.5rem; border-radius: 0.5rem;"></div>
+        <div class="skeleton-line long" style="margin-bottom: 0.75rem; height: 1rem; background: var(--color-border); border-radius: 0.25rem;"></div>
+        <div class="skeleton-line long" style="margin-bottom: 0.75rem; height: 1rem; background: var(--color-border); border-radius: 0.25rem;"></div>
+        <div class="skeleton-line medium" style="margin-bottom: 0.75rem; height: 1rem; background: var(--color-border); border-radius: 0.25rem;"></div>
+        <div class="skeleton-line long" style="margin-bottom: 0.75rem; height: 1rem; background: var(--color-border); border-radius: 0.25rem;"></div>
+        <div class="skeleton-line short" style="height: 1rem; background: var(--color-border); border-radius: 0.25rem;"></div>
+      </div>
+
+      <!-- Post content (hidden until loaded) -->
+      <article id="post-content" style="display: none;">
+        <div class="post-header">
+          <h1 id="post-title" class="post-title"></h1>
+          <div id="post-meta" class="post-meta"></div>
+        </div>
+        <div id="post-body" class="prose"></div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 My Blog &mdash; Built with plain HTML, CSS &amp; JS.</p>
+    </div>
+  </footer>
+
+  <script src="js/post-loader.js" defer></script>
+
+</body>
+</html>

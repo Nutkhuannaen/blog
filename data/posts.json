@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "slug": "hello-world",
+      "title": "Hello World",
+      "title_th": "สวัสดีโลก",
+      "lang": "en",
+      "date": "2026-07-27",
+      "tags": ["general", "intro"],
+      "category": "personal",
+      "excerpt": "Welcome to my personal blog — a space for daily writing, reflections, and ideas in both English and Thai.",
+      "excerpt_th": "ยินดีต้อนรับสู่บล็อกส่วนตัวของฉัน — พื้นที่สำหรับการเขียนรายวัน ข้อคิด และแนวคิดทั้งภาษาอังกฤษและภาษาไทย",
+      "reading_time": 2,
+      "published": true
+    }
+  ]
+}
